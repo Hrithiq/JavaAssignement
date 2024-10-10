@@ -1,0 +1,3 @@
+* Stockoverflow
+This is an inventory management application written in java for our assignment.
+TODOS are at TODOS.org

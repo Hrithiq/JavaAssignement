@@ -1,0 +1,18 @@
+* Inventory management project
+Things to ponder on: Is maven allowed, and if so, are external libraries allowed?
+If no, we can use our own csv parser, else we use a database driver.
+
+Do we create a GUI, or a terminal based app?
+** TODO 2 users: Manager and Customer
+- [ ] Dashboard for Manager.
+** TODO Notification Service
+** TODO Saving information
+All of the inventory information will be saved in files, hopefully .csv.
+** TODO Documentation
+I propose we use [[https://www.oracle.com/technical-resources/articles/java/javadoc-tool.html#format][javadoc]]. It is a supported tool by oracle widely used in the industry
+** TODO Dashboard (Urja)
+ 1) Ask the user if they want to log in, or create new user.
+    - Create new user: Call appropriate method.
+    - Login: Get the UserRow(class) ManagerRow(class) from sql
+* Optional Features
+- GUI with javafx
