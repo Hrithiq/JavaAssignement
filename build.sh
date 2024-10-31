@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-javac -d clases/ $(find . -name "*.java")
+javac -d classes/ $(find . -name "*.java")
