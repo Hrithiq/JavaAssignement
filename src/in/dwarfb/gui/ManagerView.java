@@ -11,7 +11,8 @@ import java.util.List;
 
 import in.dwarfb.inventory.Inventory;
 import in.dwarfb.inventory.Product;
-
+
+import in.dwarfb.inventory.StatisticsGenerator;
 public class ManagerView {
 
     private Scene scene;
@@ -146,7 +147,13 @@ public class ManagerView {
 
     // Placeholder for statistics function
     private void showStatistics() {
-        Alert alert = new Alert(Alert.AlertType.INFORMATION, "Showing Statistics...");
+        StatisticsGenerator sg = new StatisticsGenerator(inventory);
+        var statistics = sg.generateAllStatistics();
+        StringBuilder sb = new StringBuilder("Showing Statistics...");
+        for(var s : statistics){
+            sb.append(s+"\n");
+        }
+        Alert alert = new Alert(Alert.AlertType.INFORMATION, sb.toString());
         alert.showAndWait();
     }
 

@@ -24,7 +24,11 @@ public class StatisticsGenerator {
      */
     public StatisticsGenerator(Inventory inventory) {
         this.inventory = inventory;
-        this.orders = (Order[]) inventory.getOrders().toArray();
+        var orders = inventory.getOrders();
+        this.orders = new Order[orders.size()];
+        for(int i = 0; i < orders.size(); i++){
+            this.orders[i] = orders.get(i);
+        }
     }
 
     /**
@@ -249,31 +253,5 @@ public class StatisticsGenerator {
             result.append(product.getName()).append(": ").append(String.format("%.2f", turnoverRate)).append(", ");
         }
         return result.toString();
-    }
-}
-
-/**
- * The Statistic class represents a single statistic with a name and a value.
- */
-class Statistic {
-    private String name;
-    private Object value;
-
-    /**
-     * Statistic with the given name and value.
-     *
-     * @param name  The name of the statistic.
-     * @param value The value of the statistic.
-     */
-    public Statistic(String name, Object value) {
-        this.name = name;
-        this.value = value;
-    }
-
-    public String getName() { return name; }
-    public Object getValue() { return value; }
-
-    public String toString() {
-        return name + ": " + value;
     }
 }
