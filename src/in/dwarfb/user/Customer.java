@@ -3,7 +3,7 @@ package in.dwarfb.user;
 public class Customer extends User {
     private float money;
     public Customer(String uname, String password, float money){
-        super(uname, password);
+        super(uname, password,UserType.CUSTOMER);
         this.money = money;
     }
 

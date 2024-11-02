@@ -4,6 +4,7 @@ public class Product {
     private String ID;
     private String name;
     private long stock;
+    private long originalStock;
     private double price;
     private ProductType productType;
 
@@ -11,6 +12,7 @@ public class Product {
         ID = id;
         name = n;
         stock = s;
+        originalStock = stock;
         productType = type;
         this.price = price;
     }
@@ -35,10 +37,15 @@ public class Product {
     }
     public void setStock(long stock) {
         this.stock = stock;
+        this.originalStock = stock;
     }
 
     public void setProductType(ProductType productType) {
         this.productType = productType;
+    }
+
+    public long getInitialStock(){
+        return originalStock;
     }
 
     @Override
