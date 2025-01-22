@@ -38,15 +38,15 @@ public class StatisticsGenerator {
      */
     public Statistic[] generateAllStatistics() {
         Statistic[] statistics = new Statistic[9];
-        statistics[0] = new Statistic("totalRemainingProducts", getTotalRemainingProducts());
-        statistics[1] = new Statistic("remainingGoodsVsCargo", getRemainingGoodsVsCargo());
-        statistics[2] = new Statistic("maxItemsOrderedByLocation", getMaxItemsOrderedByLocation());
-        statistics[3] = new Statistic("productsOrderedLastMonth", getProductsOrderedOverPeriod(LocalDate.now().minusMonths(1), LocalDate.now()));
-        statistics[4] = new Statistic("topSellingProducts", getTopSellingProducts(5));
-        statistics[5] = new Statistic("averageOrderValue", getAverageOrderValue());
-        statistics[6] = new Statistic("inventoryValue", getInventoryValue());
-        statistics[7] = new Statistic("outOfStockProducts", getOutOfStockProducts());
-        statistics[8] = new Statistic("productTurnoverRate", getProductTurnoverRate());
+        statistics[0] = new Statistic("Total Remaining Products", getTotalRemainingProducts());
+        statistics[1] = new Statistic("Remaining Goods vs Cargo", getRemainingGoodsVsCargo());
+        statistics[2] = new Statistic("Max Items Ordered By Location", getMaxItemsOrderedByLocation());
+        statistics[3] = new Statistic("Product Ordered Over Period", getProductsOrderedOverPeriod(LocalDate.now().minusMonths(1), LocalDate.now()));
+        statistics[4] = new Statistic("Top Selling Product", getTopSellingProducts(5));
+        statistics[5] = new Statistic("Average Order Value", getAverageOrderValue());
+        statistics[6] = new Statistic("Inventory Value", getInventoryValue());
+        statistics[7] = new Statistic("Out Of Stock Products", getOutOfStockProducts());
+        statistics[8] = new Statistic("Product Turnover Rate", getProductTurnoverRate());
         return statistics;
     }
 

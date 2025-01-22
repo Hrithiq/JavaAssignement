@@ -9,7 +9,6 @@ public class Statistic {
 
     /**
      * Statistic with the given name and value.
-     *
      * @param name  The name of the statistic.
      * @param value The value of the statistic.
      */
